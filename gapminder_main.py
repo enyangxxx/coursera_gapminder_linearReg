@@ -25,6 +25,7 @@ dataForFrame = {'IPP': data['incomeperperson'], 'IUR': data['internetuserate']}
 df = pandas.DataFrame(data = dataForFrame)
 df = df.dropna()
 
+### mean is 8097.816446139661 ###
 IPPmean = df['IPP'].mean()
 df['IPPDeviationToMean'] = df['IPP'] - IPPmean
 
