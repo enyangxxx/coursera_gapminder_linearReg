@@ -65,20 +65,20 @@ reg1 = smf.ols('LE ~ IUR_c', data=df).fit()
 print (reg1.summary())
 
 # log function enabled without centering
-reg1 = smf.ols('LE ~ np.log(IUR)', data=df).fit()
-print (reg1.summary())
+reg2 = smf.ols('LE ~ np.log(IUR)', data=df).fit()
+print (reg2.summary())
 
 # run following line of code if getting PatsyError 'ImaginaryUnit' object is not callable
 # del I
 
 # quadratic (polynomial) regression analysis
-reg2 = smf.ols('LE ~ IUR_c + I(IUR_c**2)', data=df).fit()
-print (reg2.summary())
+reg3 = smf.ols('LE ~ IUR_c + I(IUR_c**2)', data=df).fit()
+print (reg3.summary())
 
 # adding internet use rate
-reg3 = smf.ols('LE  ~ IUR_c + I(IUR_c**2) + IPP_c', 
+reg4 = smf.ols('LE  ~ IUR_c + I(IUR_c**2) + IPP_c', 
                data=df).fit()
-print (reg3.summary())
+print (reg4.summary())
 
 #Q-Q plot for normality
 fig4=sm.qqplot(reg3.resid, line='r')
