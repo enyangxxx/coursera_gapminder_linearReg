@@ -84,7 +84,7 @@ print (reg4.summary())
 fig4=sm.qqplot(reg3.resid, line='r')
 
 # simple plot of residuals
-stdres=pandas.DataFrame(reg3.resid_pearson)
+stdres=pandas.DataFrame(reg4.resid_pearson)
 plt.plot(stdres, 'o', ls='None')
 l = plt.axhline(y=0, color='r')
 plt.ylabel('Standardized Residual')
@@ -92,8 +92,8 @@ plt.xlabel('Observation Number')
 
 # additional regression diagnostic plots
 fig2 = plt.figure(figsize=(9,6))
-fig2 = sm.graphics.plot_regress_exog(reg3,  "IUR_c", fig=fig2)
+fig2 = sm.graphics.plot_regress_exog(reg4,  "IUR_c", fig=fig2)
 
 # leverage plot
-fig3=sm.graphics.influence_plot(reg3, size=8)
+fig3=sm.graphics.influence_plot(reg4, size=8)
 print(fig3)
