@@ -6,4 +6,4 @@ Regression Modeling in Practise - Gapminder studies - Coursera - Wesleyan Univer
 git clone https://github.com/enyangxxx/coursera_gapminder_linearReg
 ```
 
-You can find more documentation in the Wiki section.
+You can find more documentation on the [Wiki pages] (https://github.com/enyangxxx/coursera_gapminder_linearReg/wiki).
