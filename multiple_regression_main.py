@@ -19,8 +19,6 @@ pandas.set_option('display.float_format', lambda x:'%.2f'%x)
 #call in data set
 data = pandas.read_csv('gapminder.csv',sep=',',error_bad_lines=False)
 
-# NEXT STEP: choose another variable
-
 # Convert argument to a numeric type
 # errors : {'ignore', 'raise', 'coerce'}, default 'raise' for raising exception
 # - If 'ignore', then invalid parsing will return the input 
